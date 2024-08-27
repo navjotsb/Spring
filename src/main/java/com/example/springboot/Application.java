@@ -19,6 +19,9 @@ public class Application {
         //SpringApplication.run(Application.class, args);
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         BMWM3 m3 = (BMWM3) context.getBean(BMWM3.class);
+
+       // BMWM3 sportModel = (BMWM3) context.getBean("bmwM3Sport"); creating a second object and system knows with the help of id bmwM3Sport
+       // System.out.println("Sport Model: " + sportModel);
         System.out.println(m3);
     }
 

@@ -5,10 +5,24 @@
 
     <bean id="dieselEngine" class="com.example.springboot.DieselEngine"/>
 
-    <bean class="com.example.springboot.BMWM3">
+    <bean id="BMWM3" class="com.example.springboot.BMWM3">
         <constructor-arg name="engine" ref="dieselEngine"/>
         <constructor-arg name="carName" value="M5"/>
-    </bean>
+        <constructor-arg name="features" >
+            <list>
+                <value>Sunroof</value>
+                <value>Turbo Charged</value>
+                <value>Auto Park</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="modelPricing" >
+            <map>
+                <entry key="m1" value="60000"/>
+                <entry key="m3" value="70000"/>
+                <entry key="m2" value="80000"/>
+            </map>
+        </constructor-arg>
 
+    </bean>
 
 </beans>
