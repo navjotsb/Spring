@@ -14,7 +14,7 @@ import lombok.Setter;
 
 
         public void postInit(){
-            System.out.println("Establishing databse connection with URL: " + jdbcUrl);
+            System.out.println("Establishing database connection with URL: " + jdbcUrl);
         }
 
         public void preDestroy(){
